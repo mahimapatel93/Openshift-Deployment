@@ -155,18 +155,76 @@ Or directly:
 ## 🔹 5.2 Install CLI
 
 ### Windows
+    step 1: after download CLI check inside download folder
+    Step 2: Extract the ZIP File
 
-1. Extract ZIP  
-2. Move `oc.exe` to:
+Go to the Downloads folder.
 
-       C:\Windows\System32
+    Right-click on the downloaded ZIP file.
+    Click Extract All.
+    Click Extract.
 
-   OR add to PATH
+After extraction, open the folder.
+You will see the following files:
 
-### macOS / Linux
+    oc.exe
 
-    tar -xvf openshift-client.tar.gz
-    sudo mv oc /usr/local/bin/
+Step 3: Move the Folder (Optional but Recommended)
+
+     Copy the extracted folder.
+     Paste it into the C drive.
+
+Example:
+
+    C:\oc
+
+The file location will be:
+
+    C:\oc\oc.exe
+Step 4: Add the Folder Path to Environment Variables
+
+    In the Windows Search bar, type:
+
+    Environment Variables
+
+    Click Edit the system environment variables.
+
+    In the new window, click Environment Variables.
+
+Under System Variables, find and select:
+
+    Path
+    Click Edit.
+    Click New.
+
+Add the following path:
+
+    C:\oc
+
+Click OK → OK → OK to save.
+
+Step 5: Restart the Terminal
+
+    Close Command Prompt or PowerShell.
+
+    Open it again.
+
+Step 6: Verify the Installation
+
+Run the following command in the terminal:
+
+    oc version
+
+If the installation is successful, the output will look like this:
+
+    Client Version: x.x.x
+    Kubernetes Version: x.x.x
+
+✅ Now the OpenShift CLI (oc) is successfully installed and you can run commands like:
+
+     oc login
+     oc get pods
+     oc get projects
 
 ---
 
@@ -222,6 +280,7 @@ Open VS Code → Extensions → Install:
 3. Select your cluster (if already logged in using oc)  
 
    OR paste server URL + token manually
+  ` paste that token inside terminal where your project file exist that folder only`
 
 ---
 
